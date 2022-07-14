@@ -1,0 +1,149 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 22px 106px rgba(0, 0, 0, 0.07), 
+        0px 9.19107px 44.2843px rgba(0, 0, 0, 0.0503198), 
+        0px 4.91399px 23.6765px rgba(0, 0, 0, 0.0417275), 
+        0px 2.75474px 13.2728px rgba(0, 0, 0, 0.035), 
+        0px 1.46302px 7.04911px rgba(0, 0, 0, 0.0282725), 
+        0px 0.608796px 2.93329px rgba(0, 0, 0, 0.0196802);
+    border-radius: 6px;
+    width: 384px;
+    padding: 48px 32px;
+    margin: 59px auto 0 auto;
+}
+
+.title {
+    font-family: 'Roboto-Medium';
+    font-size: 20px;
+    color: #262626;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+
+.server-error {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.server-error-wrapper {
+    height: 21px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .form-item {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .form-item:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+
+.input {
+    border: 1px solid #D9D9D9;
+    outline: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 3px;
+    font-size: 16px;
+}
+
+.input-error {
+    border: 1px solid red;
+    outline: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 3px;
+    font-size: 16px;
+}
+
+.input:focus {
+        border-color: #1890FF;
+
+}
+
+.input-description {
+    color: #262626;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.divider {
+    margin: 21px 0;
+    width: 100%;
+    border: 1px solid #E8E8E8;
+}
+
+.checkbox {
+
+    span {
+    font-size: 14px;
+    color: #595959;
+    line-height: 22px;
+    }
+}
+
+.button {
+    margin: 21px 0 8px 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #1890FF;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+
+    &:active {
+        background-color: #1e578d;
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #8C8C8C;
+}
+
+
+.form-error-wrapper {
+    padding-top: 2px;
+    height: 10px;
+
+    .form-error {
+        color: red;
+    }
+}
+
+.form-error {
+        color: red;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    height: 21px;
+    .spin {
+        display: flex;
+        align-items: center;
+    }
+}

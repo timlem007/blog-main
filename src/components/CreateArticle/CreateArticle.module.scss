@@ -1,0 +1,124 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    width: 938px;
+    margin: 35px auto 0 auto;
+    padding: 48px 32px;
+    background-color: white;
+    box-shadow: 
+        0px 22px 106px rgba(0, 0, 0, 0.07), 
+        0px 9.19107px 44.2843px rgba(0, 0, 0, 0.0503198), 
+        0px 4.91399px 23.6765px rgba(0, 0, 0, 0.0417275), 
+        0px 2.75474px 13.2728px rgba(0, 0, 0, 0.035), 
+        0px 1.46302px 7.04911px rgba(0, 0, 0, 0.0282725), 
+        0px 0.608796px 2.93329px rgba(0, 0, 0, 0.0196802);
+    border-radius: 6px;
+}
+
+.title {
+    font-family: 'Roboto-Medium';
+    font-size: 20px;
+    font-weight: 500;
+    color: #262626;
+    font-weight: 500;
+    margin: 0;
+}
+
+.form {
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #262626;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-title {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.input {
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    &:focus {
+        border-color: #1890FF;
+    }
+}
+
+.input-error {
+    border: 1px solid red;
+    border-radius: 4px;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.text-input {
+    padding: 8px 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    resize: none;
+    height: 168px;
+    outline: none;
+    &:focus {
+        border-color: #1890FF;
+    }
+}
+
+.text-input-error {
+    padding: 8px 12px;
+    border: 1px solid red;
+    border-radius: 4px;
+    resize: none;
+    height: 168px;
+    outline: none;    
+}
+
+.tags-wrapper {
+    margin-top: 21px; 
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    width: 319px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #1890FF;
+    color: white;
+    transition: background-color 300ms;
+
+    &:hover {
+        background-color: #136bbd;
+    }
+
+    &:active {
+        transition: none;
+        background-color: #0d4880;
+    }
+}
+
+.form-error-wrapper {
+    padding-top: 2px;
+    height: 21px;
+    color: red;
+    font-size: 14px;
+}
+
+.spinner {
+    height: 15px;
+}

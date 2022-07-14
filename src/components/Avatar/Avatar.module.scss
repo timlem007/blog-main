@@ -1,0 +1,33 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user {
+  display: flex;
+  margin-right: 12px;
+  flex-direction: column;
+  font-family: 'Inter-Regular';
+  font-size: 18px;
+}
+
+.date {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Inter-Regular';
+  margin-top: 5px;
+  
+}
+
+.title {
+  font-size: 18px;
+  font-family: 'Inter-Regular';
+}
+
+.image {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+}

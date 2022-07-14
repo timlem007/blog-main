@@ -1,0 +1,72 @@
+.input-title {
+    font-size: 14px;
+}
+
+.input {
+    margin-top: 5px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    &:focus {
+        border-color: #1890FF;
+    }
+}
+
+.delete-button {
+    margin-left: 18px;
+    font-size: 16px;
+    color: red;
+    width: 118px;
+    height: 40px;
+    border: 1px solid #F5222D;
+    border-radius: 4px;
+    transition: color 300ms, background-color 300ms;
+
+    &:hover {
+        background-color: #F5222D;
+        color: white;
+    }
+
+    &:active {
+        transition: none;
+        background-color: #9e161c;
+        color: white;
+    }
+}
+
+.delete-button-disabled {
+    margin-left: 18px;
+    font-size: 16px;
+    color: grey;
+    cursor: auto;
+    width: 118px;
+    height: 40px;
+    border: 1px solid #be7e80;
+    background-color: rgb(202, 199, 199);
+    border-radius: 4px;
+}
+
+.add-button {
+    margin-left: 17px;
+    width: 136px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #1890FF;
+    border-radius: 4px;
+    color: #1890FF;
+    transition: color 300ms, background-color 300ms;
+
+    &:hover {
+        background-color: #1890FF;
+        color: white;
+    }
+
+    &:active {
+        transition: none;
+        background-color: #0f579b;;
+        color: white;
+    }
+}

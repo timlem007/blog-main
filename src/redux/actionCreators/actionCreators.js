@@ -19,12 +19,14 @@ import {
   CREATE_ARTICLE,
 } from '../actions/actions';
 
+const URL = 'https://blog.kata.academy/'
+
 export const getArticles =
   (page = 1, token = '') =>
   async (dispatch) => {
     dispatch({ type: LOADING_ARTICLES });
     try {
-      const result = await fetch(`https://api.realworld.io/api/articles?limit=5&offset=${(page - 1) * 5}`, {
+      const result = await fetch(`${URL}api/articles?limit=5&offset=${(page - 1) * 5}`, {
         headers: { 'Content-Type': 'application/json;charset=utf-8', Authorization: token ? `Token ${token}` : null },
       });
       const json = await result.json();
@@ -41,7 +43,7 @@ export const getFullArticle =
   async (dispatch) => {
     dispatch({ type: LOADING_ARTICLE });
     try {
-      const result = await fetch(`https://api.realworld.io/api/articles/${slug}`, {
+      const result = await fetch(`${URL}api/articles/${slug}`, {
         headers: { 'Content-Type': 'application/json;charset=utf-8', Authorization: token ? `Token ${token}` : null },
       });
 
@@ -58,7 +60,7 @@ export const getFullArticle =
 export const register = (data) => async (dispatch) => {
   try {
     dispatch({ type: ACCOUNT_LOADING });
-    const result = await fetch(`https://api.realworld.io/api/users`, {
+    const result = await fetch(`${URL}api/users`, {
       method: 'POST',
       body: JSON.stringify({
         user: {
@@ -88,7 +90,7 @@ export const register = (data) => async (dispatch) => {
 export const authorization = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: ACCOUNT_LOADING });
-    const result = await fetch(`https://api.realworld.io/api/users/login`, {
+    const result = await fetch(`${URL}api/users/login`, {
       method: 'POST',
       body: JSON.stringify({
         user: {
@@ -119,7 +121,7 @@ export const logOut = () => {
 export const like = (slug, liked) => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem('user')).token;
   try {
-    const result = await fetch(`https://api.realworld.io/api/articles/${slug}/favorite`, {
+    const result = await fetch(`${URL}api/articles/${slug}/favorite`, {
       method: !liked ? 'POST' : 'DELETE',
       headers: { 'Content-Type': 'application/json;charset=utf-8', Authorization: `Token ${token}` },
     });
@@ -135,7 +137,7 @@ export const like = (slug, liked) => async (dispatch) => {
 export const deletePost = (slug, token) => async (dispatch) => {
   try {
     dispatch({ type: LOADING_ARTICLE });
-    const result = await fetch(`https://api.realworld.io/api/articles/${slug}`, {
+    const result = await fetch(`${URL}api/articles/${slug}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json;charset=utf-8', Authorization: token ? `Token ${token}` : null },
     });
@@ -156,7 +158,7 @@ export const editProfile = (username, email, password, image, token) => async (d
       error.code = 422;
       throw error;
     }
-    const result = await fetch(`https://api.realworld.io/api/user`, {
+    const result = await fetch(`${URL}api/user`, {
       method: 'PUT',
       body: JSON.stringify({
         user: {
@@ -190,7 +192,7 @@ export const editProfile = (username, email, password, image, token) => async (d
 export const createArticle = (title, description, body, tagList, token, edit, slug) => async (dispatch) => {
   try {
     dispatch({ type: ACCOUNT_LOADING });
-    const result = await fetch(`https://api.realworld.io/api/articles/${edit ? slug : ''}`, {
+    const result = await fetch(`${URL}api/articles/${edit ? slug : ''}`, {
       method: edit ? 'PUT' : 'POST',
       body: JSON.stringify({
         article: {

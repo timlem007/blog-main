@@ -155,7 +155,7 @@ const CreateAccount = () => {
             )}
           />
         </label>
-        <button type="submit" className={classes.button}>
+        <button type="submit" className={classes.button} disabled={Object.keys(errors).length}>
           Create
         </button>
       </form>

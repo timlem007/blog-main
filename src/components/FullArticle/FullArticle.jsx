@@ -65,7 +65,7 @@ const ArticleFull = () => {
 
       <div className={classes.container}>
         <p className={classes.descr}>{fullArticle.description}</p>
-        {isAuth && fullArticle.author.username === JSON.parse(localStorage.getItem('user')).username ? (
+        {isAuth && fullArticle.author.username === JSON.parse(localStorage.getItem('user')).username && (
           <>
             <Popconfirm
               placement="rightTop"
@@ -83,7 +83,7 @@ const ArticleFull = () => {
               <Button className={classes['button-edit']}>Edit</Button>
             </Link>
           </>
-        ) : null}
+        )}
       </div>
       <div className={classes.info}>
         <ReactMarkdown className={classes.text} remarkPlugins={[gfm]}>

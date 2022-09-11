@@ -109,8 +109,7 @@ const SignIn = () => {
             {errors.password && <span className={classes['form-error']}>{errors.password.message}</span>}
           </div>
         </label>
-
-        <button type="submit" className={classes.button}>
+        <button type="submit" className={classes.button} disabled={Object.keys(errors).length}>
           Login
         </button>
       </form>

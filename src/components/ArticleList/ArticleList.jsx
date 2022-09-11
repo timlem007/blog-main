@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Pagination, Spin } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { v4 as uuid } from 'uuid';
-
 import { Article } from '../Article';
 
 import { getArticles } from '../../redux/actionCreators/actionCreators';
@@ -31,7 +29,7 @@ const ArticleList = () => {
   const result = loaded ? (
     articles.map((element) => (
       <Article
-        key={uuid()}
+        key={element.id}
         title={element.title}
         author={element.author.username}
         date={element.createdAt}
@@ -53,7 +51,7 @@ const ArticleList = () => {
     <>
       <ul>{result}</ul>
       <div className={classes.pag}>
-        {loaded ? (
+        {loaded && (
           <Pagination
             size="small"
             total={articlesCount}
@@ -62,7 +60,7 @@ const ArticleList = () => {
             current={currentPage}
             showSizeChanger={false}
           />
-        ) : null}
+        )}
       </div>
     </>
   );
